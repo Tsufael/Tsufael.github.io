@@ -190,14 +190,18 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
                         ),
                       ],
                     ),
-                    Text(musicTitle.toUpperCase(),
-                      style: TextStyle(
-                        fontSize: lyricsSize + 5.0,
-                      )
+                    SelectionArea(
+                      child: Text(musicTitle.toUpperCase(),
+                        style: TextStyle(
+                          fontSize: lyricsSize + 5.0,
+                        )
+                      ),
                     ),
-                    Text(lyrics.toUpperCase(),
-                      style: TextStyle(
-                        fontSize: lyricsSize,
+                    SelectionArea(
+                      child: Text(lyrics.toUpperCase(),
+                        style: TextStyle(
+                          fontSize: lyricsSize,
+                        ),
                       ),
                     ),
                   ],
