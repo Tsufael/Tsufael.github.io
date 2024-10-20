@@ -14,5 +14,4 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           targetBranch: trunk
-          baseHref: /tsufael.github.io/
           webRenderer: canvaskit
