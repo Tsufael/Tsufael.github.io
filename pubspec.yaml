@@ -31,14 +31,22 @@ flutter:
     - lyrics/
     - lyrics/ashibina/
     - lyrics/shima_meguri/
-    - lyrics/hanjo_bushi/
+    - lyrics/hanjo_bushi_+_tumata_machi/
     - lyrics/ipe_nu_hana/
     - lyrics/chodegwa/
     - lyrics/bachikwai_bushi/
     - lyrics/ashimiji_bushi/
     - lyrics/shurei_no_shima/
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+    - lyrics/aha_bushi/
+    - lyrics/asadoya_yunta/
+    - lyrics/densaa_bushi/
+    - lyrics/erabu_yuri_nu_hana/
+    - lyrics/hiyamikachi_bushi/
+    - lyrics/juku_no_haru/
+    - lyrics/kanasando/
+    - lyrics/medetai_bushi/
+    - lyrics/nmu_nu_jidai/
+    - lyrics/tinsagu_nu_hana/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
