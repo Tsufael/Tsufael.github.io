@@ -20,12 +20,6 @@
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
-  <!-- no-cache -->
-  <meta http-equiv="cache-control" content="no-cache"/>
-  <meta http-equiv="expires" content="0"/>
-  <meta http-equiv="pragma" content="no-cache"/>
-
-
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -39,6 +33,30 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", './version.json', true);
+        xmlhttp.onload = function () {
+          if (xmlhttp.status == 200) {
+            var version = xmlhttp.responseText.split(',')[1];
+            var currentVersion = window.localStorage.getItem('version');
+            console.log('currentVersion is ' + currentVersion);
+            console.log('version is ' + version);
+            if (currentVersion && currentVersion != version) {
+              console.log('clearing cache');
+              caches.delete('flutter-app-manifest');
+              caches.delete('flutter-temp-cache');
+              caches.delete('flutter-app-cache');
+            }
+            window.localStorage.setItem('version', version);
+          }
+        };
+        xmlhttp.send();
+      });
+    }
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
